@@ -290,7 +290,7 @@ def parse_color(colorstr):
 def main():
     # 解析命令行参数
     parser = argparse.ArgumentParser(
-        'seewav', description="从音频文件生成美观的MP4波形动画。")
+        'SeeVoice', description="从音频文件生成美观的MP4波形动画。")
     parser.add_argument("-r", "--rate", type=int, default=60, help="视频帧率，默认60。")
     parser.add_argument("--stereo", action='store_true',
                         help="为立体声文件生成两个独立波形（左/右声道）。")

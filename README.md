@@ -1,10 +1,10 @@
-# SeeWav：音频波形动画生成工具 | 适配播客可视化与社交媒体传播
-SeeWav可快速为您的音频生成精美波形动画，**特别适用于播客网站制作可视化视频，以及社交媒体内容传播**，让音频内容通过直观的视觉形式更易传播、更具吸引力。
+# SeeVoice：音频波形动画生成工具 | 适配播客可视化与社交媒体传播
+SeeVoice可快速为您的音频生成精美波形动画，**特别适用于播客网站制作可视化视频，以及社交媒体内容传播**，让音频内容通过直观的视觉形式更易传播、更具吸引力。
 
 查看演示请点击下方图片：
 <p align="center">
 <a href="out.mp4">
-<img src="./seewav.png" alt="seewav演示"></a></p>
+<img src="./SeeVoice.png" alt="SeeVoice演示"></a></p>
 
 
 ## 安装
@@ -20,19 +20,19 @@ SeeWav可快速为您的音频生成精美波形动画，**特别适用于播客
 ```bash
 uv init --python 3.11
 uv add pycairo numpy tqdm
-uv run seewav.py test_query.mp3  # 直接生成默认配置的波形视频
+uv run SeeVoice.py audio.mp3  # 直接生成默认配置的波形视频
 ```
 
 
 ## 高级配置
 支持通过参数自定义动画细节，适配不同播客平台（如小宇宙、喜马拉雅）的展示规格及社交媒体（抖音、视频号、Twitter等）的尺寸/风格需求：
 ```bash
-seewav 音频文件 [输出文件]
+SeeVoice 音频文件 [输出文件]
 ```
 默认输出文件为`out.mp4`（兼容主流平台的通用格式），可用选项如下：
 
 ```bash
-usage: seewav [-h] [-r 帧率] [--stereo] [-c 颜色] [-c2 颜色2] [--white]
+usage: SeeVoice [-h] [-r 帧率] [--stereo] [-c 颜色] [-c2 颜色2] [--white]
               [-B 柱形数量] [-O 过采样率] [-T 单帧时长] [-S 过渡速度] [-W 宽度]
               [-H 高度] [-s 起始时间] [-d 持续时长]
               audio [out]

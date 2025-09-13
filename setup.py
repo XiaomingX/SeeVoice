@@ -5,9 +5,9 @@ from pathlib import Path
 from setuptools import setup
 
 # 项目基础配置
-NAME = 'seewav'  # 包名称（需与PyPI仓库名称一致）
+NAME = 'SeeVoice'  # 包名称（需与PyPI仓库名称一致）
 DESCRIPTION = '音频波形可视化工具'  # 包的简短描述
-URL = 'https://github.com/adefossez/seewav'  # 项目仓库地址
+URL = 'https://github.com/adefossez/SeeVoice'  # 项目仓库地址
 EMAIL = 'xxx@gmail.com'  # 作者邮箱（可根据实际情况修改）
 AUTHOR = 'xxx'  # 作者名称（可根据实际情况修改）
 REQUIRES_PYTHON = '>=3.6.0'  # 项目所需的最低Python版本
@@ -37,10 +37,10 @@ setup(
     author_email=EMAIL,
     python_requires=REQUIRES_PYTHON,
     url=URL,
-    py_modules=['seewav'],  # 指定需包含的Python模块（对应seewav.py文件）
-    # 配置命令行入口：安装后可直接通过"seewav"命令调用seewav模块的main函数
+    py_modules=['SeeVoice'],  # 指定需包含的Python模块（对应SeeVoice.py文件）
+    # 配置命令行入口：安装后可直接通过"SeeVoice"命令调用SeeVoice模块的main函数
     entry_points={
-        'console_scripts': ['seewav=seewav:main'],
+        'console_scripts': ['SeeVoice=SeeVoice:main'],
     },
     install_requires=REQUIRED,  # 项目依赖的第三方包列表
     include_package_data=True,  # 是否包含包内非代码文件（如README、LICENSE等）
