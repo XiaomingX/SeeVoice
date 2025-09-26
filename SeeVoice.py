@@ -340,8 +340,8 @@ def main():
                         type=Path,
                         nargs='?',
                         # 修改默认输出文件名为out_当前日期.mp4
-                        default=Path(f'out_{current_date}.mp4'),
-                        help=f'输出视频文件的路径，默认值为./out_{current_date}.mp4。')
+                        default=Path(f'{current_date}.mp4'),
+                        help=f'输出视频文件的路径，默认值为./{current_date}.mp4。')
     args = parser.parse_args()
 
     # 创建临时文件夹并执行可视化生成
