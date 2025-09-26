@@ -9,6 +9,7 @@ import subprocess as sp
 import sys
 import tempfile
 from pathlib import Path
+import datetime  # 新增：用于获取当前日期
 
 import cairo
 import numpy as np
@@ -288,6 +289,9 @@ def parse_color(colorstr):
 
 
 def main():
+    # 获取当前日期并格式化为YYYYMMDD
+    current_date = datetime.datetime.now().strftime("%Y%m%d")
+    
     # 解析命令行参数
     parser = argparse.ArgumentParser(
         'SeeVoice', description="从音频文件生成美观的MP4波形动画。")
@@ -335,8 +339,9 @@ def main():
     parser.add_argument("out",
                         type=Path,
                         nargs='?',
-                        default=Path('out.mp4'),
-                        help='输出视频文件的路径，默认值为./out.mp4。')
+                        # 修改默认输出文件名为out_当前日期.mp4
+                        default=Path(f'out_{current_date}.mp4'),
+                        help=f'输出视频文件的路径，默认值为./out_{current_date}.mp4。')
     args = parser.parse_args()
 
     # 创建临时文件夹并执行可视化生成
@@ -361,6 +366,3 @@ def main():
 if __name__ == "__main__":
     _is_main = True
     main()
-
-
-    
